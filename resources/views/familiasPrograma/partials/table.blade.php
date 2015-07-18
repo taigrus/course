@@ -14,8 +14,8 @@
             <td>{{$familiaPrograma->latitud}}</td>
             <td>{{$familiaPrograma->longitud}}</td>
             <td>
-                {!! link_to_route('editarfamilia/{id}','Editar', $familiaPrograma->id,['class' => 'btn btn-warning btn-xs']) !!}
-                {!! link_to_route('editarfamilia/{id}','Eliminar', $familiaPrograma->id,['class' => 'btn btn-danger btn-xs']) !!}
+                {!! link_to_route('familiaprograma.familia.edit','Editar', $familiaPrograma->id,['class' => 'btn btn-warning btn-xs']) !!}
+                {!! link_to_route('familiaprograma.familia.edit','Eliminar', $familiaPrograma->id,['class' => 'btn btn-danger btn-xs']) !!}
             </td>
         </tr>
     @endforeach

@@ -34,8 +34,10 @@
             <ul class="nav navbar-nav">
                 @if (!Auth::guest())
                     @if(Auth::user()->type == 'admin')
-                        <li><a href="/public/admin/users">Usuarios</a></li>
+                        <li><a href="{{route('admin.users.index')}}">Usuarios</a></li>
+
                     @endif
+                    <li><a href="{{route('familiaprograma.familia.index')}}">Familias</a></li>
                 @endif
             </ul>
             <ul class="nav navbar-nav navbar-right">

@@ -35,16 +35,24 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin'], function(){
 //rutas para familias del programa
 Route::group(['prefix' => 'familiaprograma', 'namespace' => '\FamiliasPrograma'], function(){
 
-    Route::get('familias', [
+/*    Route::get('familias', [
         'as' => 'familias',
         'uses' => 'FamiliaProgramaController@index'
     ]);
 
 
-    Route::get('editarfamilia/{id}', [
-        'as' => 'editarfamilia',
+    Route::get('/{id}/edit', [
+        'as' => 'familiaprograma.edit',
         'uses' => 'FamiliaProgramaController@edit'
+    ]);*/
+    Route::get('search', [
+        'as' => 'search',
+        'uses' => 'FamiliaProgramaController@search'
     ]);
+
+    Route::resource('familia','FamiliaProgramaController');
+
+
 
     //Route::resource('familias','FamiliaProgramaController');
 
